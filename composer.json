@@ -1,0 +1,33 @@
+{
+  "name": "pymba86/reformagkh-grabber",
+  "description": "Выгрузка данных с сайта Реформа ЖКХ",
+  "keywords": ["reformagkh", "library", "grabber"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artem Matveychuk",
+      "email": "pymba-96@mail.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "type": "library",
+  "require": {
+    "php": ">=7.1",
+    "ext-soap": "*",
+    "ext-dom": "*",
+    "ext-simplexml": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Reformagkh\\Grabber": "src/Reformagkh/Grabber"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Reformagkh\\Grabber": "tests/Reformagkh/Grabber"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0"
+  }
+}
