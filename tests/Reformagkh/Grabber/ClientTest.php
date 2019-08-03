@@ -5,7 +5,7 @@ namespace Reformagkh\Grabber;
 use PHPUnit\Framework\TestCase;
 use Reformagkh\Grabber\Types\Report\ReportingPeriodStateEnum;
 
-class GrabberClientTest extends TestCase
+class ClientTest extends TestCase
 {
     /**
      * @var Client
@@ -55,8 +55,6 @@ class GrabberClientTest extends TestCase
         $this->assertNotEmpty($result);
     }
 
-    /**
-     */
     public function testGetCompanyProfileList()
     {
         // Получить список организаций с пагинацией
@@ -65,15 +63,18 @@ class GrabberClientTest extends TestCase
             465
         );
 
-        foreach ($result as $item) {
-            print_r($item);
-        }
+        $maxCount = 100;
+        $currentCount = 0;
 
+        foreach ($result as $item) {
+            $currentCount++;
+            if ($currentCount > $maxCount) {
+                break;
+            }
+        }
         $this->assertNotEmpty($result);
     }
 
-    /**
-     */
     public function testGetHouseProfileList()
     {
         // Получить список организаций с пагинацией

@@ -14,20 +14,20 @@ class HouseFloorTypeEnum extends Enum
     /**
      * Используемый
      */
-    const NO_DATA = "1";
+    const NO_DATA = 1;
 
     /**
      * Железобетонные
      */
-    const REINFORCED = "2";
+    const REINFORCED = 2;
 
     /**
      * Деревянные
      */
-    const WOODEN = "3";
+    const WOODEN = 3;
 
     /**
      * Смешанные
      */
-    const MIXED = "4";
+    const MIXED = 4;
 }

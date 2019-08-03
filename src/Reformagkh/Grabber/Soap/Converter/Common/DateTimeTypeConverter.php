@@ -8,7 +8,7 @@ use Reformagkh\Grabber\Soap\Converter\TypeConverterInterface;
 
 /**
  * Преобразование поля в DateTime
- * @package Reformagkh\Grabber\Soap\TypeConverter
+ * @package Reformagkh\Grabber\Soap\Converter\Common
  */
 class DateTimeTypeConverter implements TypeConverterInterface {
 

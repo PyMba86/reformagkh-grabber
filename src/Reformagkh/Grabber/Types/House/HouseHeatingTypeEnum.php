@@ -14,22 +14,22 @@ class HouseHeatingTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Центральное
      */
-    const CENTRAL = "2";
+    const CENTRAL = 2;
 
     /**
      * Автономная котельная (крышная, встроенно-пристроенная)
      */
-    const STANDALONE_BOLIER = "3";
+    const STANDALONE_BOLIER = 3;
 
     /**
      * Квартирное отопление (квартирный котел)
      */
-    const ROOM_BOLIER = "4";
+    const ROOM_BOLIER = 4;
 
     /**
      * Печное
@@ -39,16 +39,16 @@ class HouseHeatingTypeEnum extends Enum
     /**
      * Электроотопление
      */
-    const ELECTRIC = "6";
+    const ELECTRIC = 6;
 
     /**
      * Индивидуальный тепловой пункт (ИТП)
      */
-    const ITP = "7";
+    const ITP = 7;
 
     /**
      * Газовая колонка
      */
-    const GAS = "8";
+    const GAS = 8;
 
 }

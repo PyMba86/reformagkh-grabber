@@ -18,8 +18,8 @@ class SoapClientFactory
         'GetHouseProfileSF988Response' => 'Reformagkh\Grabber\Result\RecordPageable',
 
         // Report
-        'ReportingPeriod' => 'Reformagkh\Grabber\Types\ReportingPeriod',
-        'ReportingPeriodStateEnum' => 'Reformagkh\Grabber\Types\ReportingPeriodStateEnum',
+        'ReportingPeriod' => 'Reformagkh\Grabber\Types\Report\ReportingPeriod',
+        'ReportingPeriodStateEnum' => 'Reformagkh\Grabber\Types\Report\ReportingPeriodStateEnum',
 
         // House
         'HouseChuteTypeEnum' => 'Reformagkh\Grabber\Types\House\HouseChuteTypeEnum',
@@ -148,5 +148,19 @@ class SoapClientFactory
         return $this;
     }
 
+    /**
+     * @return array
+     */
+    public function getClassmap(): array
+    {
+        return $this->classmap;
+    }
 
+    /**
+     * @param array $classmap
+     */
+    public function setClassmap(array $classmap): void
+    {
+        $this->classmap = $classmap;
+    }
 }

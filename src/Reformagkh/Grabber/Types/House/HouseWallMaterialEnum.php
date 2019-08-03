@@ -14,41 +14,41 @@ class HouseWallMaterialEnum extends Enum
     /**
      * Нет данных
      */
-    const NO_DATA = "1";
+    const NO_DATA = 1;
 
     /**
      * Каменные, кирпичные
      */
-    const STONE = "2";
+    const STONE = 2;
 
     /**
      * Панельные
      */
-    const PANEL = "3";
+    const PANEL = 3;
 
     /**
      * Блочные
      */
-    const BLOCKY = "4";
+    const BLOCKY = 4;
 
     /**
      * Смешанные
      */
-    const MIXED = "5";
+    const MIXED = 5;
 
     /**
      * Монолитные
      */
-    const MONOLITHIC = "6";
+    const MONOLITHIC = 6;
 
     /**
      * Деревянные
      */
-    const WOODEN = "7";
+    const WOODEN = 7;
 
     /**
      * Прочие
      */
-    const OTHER = "8";
+    const OTHER = 8;
 
 }

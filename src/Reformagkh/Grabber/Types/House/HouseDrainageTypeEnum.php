@@ -14,20 +14,20 @@ class HouseDrainageTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Наружные водостоки
      */
-    const OUTDOOR = "2";
+    const OUTDOOR = 2;
 
     /**
      * Внутренние водостоки
      */
-    const INLAND = "3";
+    const INLAND = 3;
 
     /**
      * Смешанные
      */
-    const MIXED = "4";
+    const MIXED = 4;
 }

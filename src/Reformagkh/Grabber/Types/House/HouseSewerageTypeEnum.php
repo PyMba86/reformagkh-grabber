@@ -14,16 +14,16 @@ class HouseSewerageTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Центральное
      */
-    const CENTRAL = "2";
+    const CENTRAL = 2;
 
     /**
      * Автономное
      */
-    const STANDALONE = "3";
+    const STANDALONE = 3;
 
 }

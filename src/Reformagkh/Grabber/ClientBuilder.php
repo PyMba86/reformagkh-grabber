@@ -45,18 +45,22 @@ class ClientBuilder
 
     /**
      * @param SoapClientFactory $soapClientFactory
+     * @return ClientBuilder
      */
-    public function setSoapClientFactory(SoapClientFactory $soapClientFactory): void
+    public function setSoapClientFactory(SoapClientFactory $soapClientFactory)
     {
         $this->soapClientFactory = $soapClientFactory;
+        return $this;
     }
 
     /**
      * @param array $soapOptions
+     * @return ClientBuilder
      */
-    public function setSoapOptions(array $soapOptions): void
+    public function setSoapOptions(array $soapOptions)
     {
         $this->soapOptions = $soapOptions;
+        return $this;
     }
 
     /**

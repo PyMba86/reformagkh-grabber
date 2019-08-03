@@ -7,7 +7,7 @@ use Reformagkh\Grabber\Types\House\HouseStageEnum;
 
 /**
  * Преобразование поля в HouseStageEnum
- * @package Reformagkh\Grabber\Soap\TypeConverter
+ * @package Reformagkh\Grabber\Soap\Converter\House
  */
 class HouseStageTypeConverter implements TypeConverterInterface {
 
@@ -33,7 +33,7 @@ class HouseStageTypeConverter implements TypeConverterInterface {
      */
     function convertToData(string $input)
     {
-        return HouseStageEnum::byValue($input);
+        return HouseStageEnum::byValue(intval($input));
     }
 
     /**

@@ -7,7 +7,7 @@ use Reformagkh\Grabber\Types\House\HouseEnergyEfficiencyClassEnum;
 
 /**
  * Преобразование поля в HouseEnergyEfficiencyClassEnum
- * @package Reformagkh\Grabber\Soap\TypeConverter
+ * @package Reformagkh\Grabber\Soap\Converter\House
  */
 class HouseEnergyEfficiencyClassTypeConverter implements TypeConverterInterface {
 
@@ -33,7 +33,7 @@ class HouseEnergyEfficiencyClassTypeConverter implements TypeConverterInterface 
      */
     function convertToData(string $input)
     {
-        return HouseEnergyEfficiencyClassEnum::byValue($input);
+        return HouseEnergyEfficiencyClassEnum::byValue(intval($input));
     }
 
     /**

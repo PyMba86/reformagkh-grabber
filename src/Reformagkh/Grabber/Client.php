@@ -138,7 +138,8 @@ class Client implements ClientInterface
     {
         $list = $this->getReportingPeriodList();
         return current(array_filter($list, function (ReportingPeriod $period) {
-            return ($period->state->is(ReportingPeriodStateEnum::CURRENT));
+            $state = ReportingPeriodStateEnum::get($period->state);
+            return ($state->is(ReportingPeriodStateEnum::CURRENT));
         }));
     }
 

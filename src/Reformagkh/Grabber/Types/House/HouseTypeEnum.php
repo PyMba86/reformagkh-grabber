@@ -14,20 +14,20 @@ class HouseTypeEnum extends Enum
     /**
      * Общежитие
      */
-    const HOSTEL = "1";
+    const HOSTEL = 1;
 
     /**
      * Объект индивидуального жилищного строительства
      */
-    const INDIVIDUAL_OBJECT = "2";
+    const INDIVIDUAL_OBJECT = 2;
 
     /**
      * Жилой дом блокированной застройки
      */
-    const HOUSE = "3";
+    const HOUSE = 3;
 
     /**
      * Многоквартирный дом
      */
-    const APARTMENT_HOUSE = "4";
+    const APARTMENT_HOUSE = 4;
 }

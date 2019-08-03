@@ -14,20 +14,20 @@ class HouseVentilationTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Приточная вентиляция
      */
-    const FORCED = "2";
+    const FORCED = 2;
 
     /**
      * Вытяжная вентиляция
      */
-    const EXHAUST = "3";
+    const EXHAUST = 3;
 
     /**
      * Приточно-вытяжная вентиляция
      */
-    const MIXED = "4";
+    const MIXED = 4;
 }

@@ -3,13 +3,14 @@
 namespace Reformagkh\Grabber\Soap\Converter\Report;
 
 use Reformagkh\Grabber\Soap\Converter\TypeConverterInterface;
-use Reformagkh\Grabber\Types\ReportingPeriodStateEnum;
+use Reformagkh\Grabber\Types\Report\ReportingPeriodStateEnum;
 
 /**
  * Преобразование поля в ReportingPeriodStateEnum
- * @package Reformagkh\Grabber\Soap\TypeConverter
+ * @package Reformagkh\Grabber\Soap\Converter\Report
  */
-class ReportingPeriodStateTypeConverter implements TypeConverterInterface {
+class ReportingPeriodStateTypeConverter implements TypeConverterInterface
+{
 
     /**
      * {@inheritdoc}
@@ -33,7 +34,7 @@ class ReportingPeriodStateTypeConverter implements TypeConverterInterface {
      */
     function convertToData(string $input)
     {
-        return ReportingPeriodStateEnum::byValue($input);
+        return ReportingPeriodStateEnum::byValue(intval($input));
     }
 
     /**

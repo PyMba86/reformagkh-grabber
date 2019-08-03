@@ -14,40 +14,40 @@ class HouseChuteTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Квартирные
      */
-    const ROOMS = "2";
+    const ROOMS = 2;
 
     /**
      * На лестничной клетке
      */
-    const STAIRWELL = "3";
+    const STAIRWELL = 3;
 
     /**
      * Сухой (холодный)
      */
-    const DRY_COLD = "4";
+    const DRY_COLD = 4;
 
     /**
      * Сухой
      */
-    const DRY = "5";
+    const DRY = 5;
 
     /**
      * Холодный
      */
-    const COLD = "6";
+    const COLD = 6;
 
     /**
      * Огневой (горячий)
      */
-    const FIRE = "7";
+    const FIRE = 7;
 
     /**
      * Мокрый
      */
-    const WET = "8";
+    const WET = 8;
 }

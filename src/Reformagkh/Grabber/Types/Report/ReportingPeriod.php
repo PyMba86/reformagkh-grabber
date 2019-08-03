@@ -7,7 +7,7 @@ use DateTime;
 /**
  * Отчетный период
  *
- * @package Reformagkh\Grabber\Types
+ * @package Reformagkh\Grabber\Types\Report
  */
 class ReportingPeriod {
 
@@ -32,7 +32,7 @@ class ReportingPeriod {
     public $name;
 
     /**
-     * @var ReportingPeriodStateEnum
+     * @var int | ReportingPeriodStateEnum
      */
     public $state;
 

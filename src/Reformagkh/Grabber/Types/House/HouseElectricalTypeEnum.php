@@ -14,15 +14,15 @@ class HouseElectricalTypeEnum extends Enum
     /**
      * Отсутствует
      */
-    const MISSING = "1";
+    const MISSING = 1;
 
     /**
      * Центральное
      */
-    const CENTRAL = "2";
+    const CENTRAL = 2;
 
     /**
      * Комбинированное
      */
-    const COMBINED = "3";
+    const COMBINED = 3;
 }
