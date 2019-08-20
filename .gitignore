@@ -1,4 +1,6 @@
 .idea
 *.impl
 vendor
-phpunit.xml
+*.env
+*.cache
+storage

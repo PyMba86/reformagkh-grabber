@@ -18,11 +18,14 @@ class CustomTypeConverterTest extends TestCase
 
     protected function setUp(): void
     {
-        $builder = new ClientBuilder('viadmhmao', '02dc030');
+        $builder = new ClientBuilder(
+            getenv("API_LOGIN"),
+            getenv("API_PASSWORD")
+        );
 
         $soapClientFactory = new SoapClientFactory();
         $soapClientFactory->setTypeConverters(new TypeConverterCollection(
-            array (
+            array(
                 new DateTimeTypeConverter(),
                 new DateTypeConverter(),
             )

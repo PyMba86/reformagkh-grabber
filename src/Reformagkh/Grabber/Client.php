@@ -5,6 +5,7 @@ namespace Reformagkh\Grabber;
 use Reformagkh\Grabber\Result\RecordIterator;
 use Reformagkh\Grabber\Result\RecordPageable;
 use Reformagkh\Grabber\Soap\SoapClient;
+use Reformagkh\Grabber\Types\FiasAddress;
 use Reformagkh\Grabber\Types\Report\ReportingPeriod;
 use Reformagkh\Grabber\Types\Report\ReportingPeriodStateEnum;
 use SoapHeader;
@@ -112,6 +113,34 @@ class Client implements ClientInterface
     }
 
     /**
+     * @param int $houseId
+     * @param string $houseGuid
+     * @return array
+     * @throws \SoapFault
+     */
+    public function getHouseProfileActual(int $houseId, string $houseGuid): array
+    {
+        return $this->call('GetHouseProfileActual',
+            array(
+                'house_id' => $houseId,
+                'houseguid' => $houseGuid
+            ));
+    }
+
+    /**
+     * @param FiasAddress $address
+     * @return array
+     * @throws \SoapFault
+     */
+    public function getHouseInfo(FiasAddress $address): array
+    {
+        return $this->call('GetHouseInfo',
+            array(
+                'address' => $address
+            ));
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getCompanyProfileList(string $regionId, int $periodId): RecordIterator
@@ -126,7 +155,8 @@ class Client implements ClientInterface
      * {@inheritdoc}
      * @throws \SoapFault
      */
-    public function getReportingPeriodList(): array {
+    public function getReportingPeriodList(): array
+    {
         return $this->call('GetReportingPeriodList');
     }
 

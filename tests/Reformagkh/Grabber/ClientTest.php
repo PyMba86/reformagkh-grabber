@@ -15,15 +15,20 @@ class ClientTest extends TestCase
     protected function setUp(): void
     {
         $builder = new ClientBuilder(
-            'viadmhmao',
-            '02dc030');
+            getenv("API_LOGIN"),
+            getenv("API_PASSWORD")
+        );
 
         $this->client = $builder->build();
     }
 
     public function testLoginClient()
     {
-        $this->client->login('viadmhmao', '02dc030');
+        $this->client->login(
+            getenv("API_LOGIN"),
+            getenv("API_PASSWORD")
+        );
+
         $this->assertNotEmpty($this->client->getToken());
     }
 
