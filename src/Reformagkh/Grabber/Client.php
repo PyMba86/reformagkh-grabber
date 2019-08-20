@@ -113,6 +113,21 @@ class Client implements ClientInterface
     }
 
     /**
+     * @param string $inn
+     * @param int $periodId
+     * @return array
+     * @throws \SoapFault
+     */
+    public function getCompanyProfile(string $inn, int $periodId): array
+    {
+        return $this->call('GetCompanyProfile988',
+            array(
+                'inn' => $inn,
+                'reporting_period_id' => $periodId
+            ));
+    }
+
+    /**
      * @param int $houseId
      * @param string $houseGuid
      * @return array

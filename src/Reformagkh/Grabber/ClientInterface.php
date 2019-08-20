@@ -4,6 +4,7 @@ namespace Reformagkh\Grabber;
 
 use Reformagkh\Grabber\Result\RecordIterator;
 use Reformagkh\Grabber\Result\RecordPageable;
+use Reformagkh\Grabber\Types\FiasAddress;
 use Reformagkh\Grabber\Types\Report\ReportingPeriod;
 
 /**
@@ -20,7 +21,7 @@ interface ClientInterface
      * @param string $password Набор символов, для подтверждения личности или полномочий.
      * @return string Токен
      */
-    public function login($username, $password): string ;
+    public function login($username, $password): string;
 
     /**
      * Метод завершает авторизованный сеанс работы внешней системы.
@@ -61,7 +62,7 @@ interface ClientInterface
      *
      * @param string $regionId Уникальный идентификатор региона (GUID из ФИАС)
      * @param int $pageNumber Номер страницы
-     * @param int $periodId  Идентификатор отчетного периода
+     * @param int $periodId Идентификатор отчетного периода
      * @return RecordPageable Массив анкет в параметре data
      */
     public function getCompanyProfilePage(string $regionId, int $pageNumber, int $periodId): RecordPageable;
@@ -86,4 +87,32 @@ interface ClientInterface
      * @return RecordIterator Объект итератора
      */
     public function getHouseProfileList(string $regionId, int $periodId): RecordIterator;
+
+    /**
+     * Метод получения данных  анкеты (текущей и архивной) управляющей организации
+     * с соответствующим ИНН за указанный отчетный период.
+     *
+     * @param string $inn
+     * @param int $periodId
+     * @return array
+     */
+    public function getCompanyProfile(string $inn, int $periodId): array;
+
+    /**
+     * Метод получения данных текущей анкеты дома (в управлении/ не в управлении) по указанному
+     * идентификатору дома.
+     *
+     * @param int $houseId
+     * @param string $houseGuid
+     * @return array
+     */
+    public function getHouseProfileActual(int $houseId, string $houseGuid): array;
+
+    /**
+     * Метод получения идентификатора дома с соответствующим адресом по ФИАС.
+     *
+     * @param FiasAddress $address
+     * @return array
+     */
+    public function getHouseInfo(FiasAddress $address): array;
 }
