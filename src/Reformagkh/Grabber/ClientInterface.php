@@ -94,19 +94,27 @@ interface ClientInterface
      *
      * @param string $inn
      * @param int $periodId
-     * @return array
+     * @return mixed
      */
-    public function getCompanyProfile(string $inn, int $periodId): array;
+    public function getCompanyProfile(string $inn, int $periodId);
 
     /**
      * Метод получения данных текущей анкеты дома (в управлении/ не в управлении) по указанному
-     * идентификатору дома.
+     * идентификатору дома в системе.
      *
      * @param int $houseId
+     * @return array
+     */
+    public function getHouseProfileActualById(int $houseId);
+
+    /**
+     * Метод получения данных текущей анкеты дома (в управлении/ не в управлении) по указанному
+     * идентификатору дома GUID из ФИАС.
+     *
      * @param string $houseGuid
      * @return array
      */
-    public function getHouseProfileActual(int $houseId, string $houseGuid): array;
+    public function getHouseProfileActualByGuid(string $houseGuid);
 
     /**
      * Метод получения идентификатора дома с соответствующим адресом по ФИАС.

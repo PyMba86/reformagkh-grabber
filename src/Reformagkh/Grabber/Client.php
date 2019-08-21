@@ -115,10 +115,10 @@ class Client implements ClientInterface
     /**
      * @param string $inn
      * @param int $periodId
-     * @return array
+     * @return mixed
      * @throws \SoapFault
      */
-    public function getCompanyProfile(string $inn, int $periodId): array
+    public function getCompanyProfile(string $inn, int $periodId)
     {
         return $this->call('GetCompanyProfile988',
             array(
@@ -129,15 +129,26 @@ class Client implements ClientInterface
 
     /**
      * @param int $houseId
+     * @return mixed
+     * @throws \SoapFault
+     */
+    public function getHouseProfileActualById(int $houseId)
+    {
+        return $this->call('GetHouseProfileActual',
+            array(
+                'house_id' => $houseId
+            ));
+    }
+
+    /**
      * @param string $houseGuid
      * @return array
      * @throws \SoapFault
      */
-    public function getHouseProfileActual(int $houseId, string $houseGuid): array
+    public function getHouseProfileActualByGuid(string $houseGuid)
     {
         return $this->call('GetHouseProfileActual',
             array(
-                'house_id' => $houseId,
                 'houseguid' => $houseGuid
             ));
     }
@@ -239,7 +250,7 @@ class Client implements ClientInterface
     /**
      * @param string $method
      * @param array $params
-     * @return array
+     * @return mixed
      * @throws \SoapFault
      */
     protected function call(string $method, array $params = array())
