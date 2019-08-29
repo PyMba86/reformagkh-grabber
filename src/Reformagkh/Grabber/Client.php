@@ -149,6 +149,7 @@ class Client implements ClientInterface
     {
         return $this->call('GetHouseProfileActual',
             array(
+                'house_id' => null,
                 'houseguid' => $houseGuid
             ));
     }

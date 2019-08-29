@@ -16,8 +16,8 @@ class ClientTest extends TestCase
     protected function setUp(): void
     {
         $builder = new ClientBuilder(
-            getenv("API_LOGIN"),
-            getenv("API_PASSWORD")
+            "viadmhmao",
+            "02Fv030"
         );
 
         $this->client = $builder->build();
@@ -110,6 +110,15 @@ class ClientTest extends TestCase
         $address = new FiasAddress();
         $address->houseguid = "a1e15dcd-cfe6-47a1-870b-f592cd1f2e5c";
         $result = $this->client->getHouseInfo($address);
+        $this->assertNotEmpty($result);
+    }
+
+    /**
+     * @throws \SoapFault
+     */
+    public function testGetHouseProfileActualByGuid() {
+        $houseGuid = "a1e15dcd-cfe6-47a1-870b-f592cd1f2e5c";
+        $result = $this->client->getHouseProfileActualByGuid($houseGuid);
         $this->assertNotEmpty($result);
     }
 
