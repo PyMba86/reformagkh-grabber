@@ -3,6 +3,7 @@
 namespace Reformagkh\Grabber;
 
 use PHPUnit\Framework\TestCase;
+use Reformagkh\Grabber\Types\FiasAddress;
 use Reformagkh\Grabber\Types\Report\ReportingPeriodStateEnum;
 
 class ClientTest extends TestCase
@@ -99,6 +100,16 @@ class ClientTest extends TestCase
             }
         }
 
+        $this->assertNotEmpty($result);
+    }
+
+    /**
+     * @throws \SoapFault
+     */
+    public function testGetHouseInfo() {
+        $address = new FiasAddress();
+        $address->houseguid = "a1e15dcd-cfe6-47a1-870b-f592cd1f2e5c";
+        $result = $this->client->getHouseInfo($address);
         $this->assertNotEmpty($result);
     }
 

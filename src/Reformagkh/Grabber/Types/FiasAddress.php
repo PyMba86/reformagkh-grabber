@@ -12,22 +12,22 @@ class FiasAddress
     /**
      * @var string
      */
-    public $cityId;
+    public $city_id;
 
     /**
      * @var string
      */
-    public $streetId;
+    public $street_id;
 
     /**
      * @var string
      */
-    public $houseGuid;
+    public $houseguid;
 
     /**
      * @var string
      */
-    public $houseNumber;
+    public $house_number;
 
     /**
      * @var string
@@ -42,7 +42,7 @@ class FiasAddress
     /**
      * @var string
      */
-    public $roomNumber;
+    public $room_number;
 
     /**
      * @var string
