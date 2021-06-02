@@ -11,7 +11,7 @@ login
 
 ```php
 <?php
-$client->login('viadmhmao', '02dc030');
+$client->login('login', 'password');
 ```
 
 --------------------
